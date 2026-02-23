@@ -1,0 +1,15 @@
+<../../../mkconfig
+
+CFLAGS=$CFLAGS -D_9FTCH_HOST
+
+TARG=ar
+
+OFILES=	ar.$O\
+
+HFILES=\
+
+LIBS=mach bio 9
+
+BIN=$ROOT/$OBJDIR/bin
+
+<$ROOT/mkfiles/mkone-$SHELLTYPE

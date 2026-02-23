@@ -1,0 +1,40 @@
+<../../../mkconfig
+
+AR=/usr/bin/ar
+
+CFLAGS=$CFLAGS -D_9FTCH_HOST
+
+LIB=libcc.a
+
+OFILES=\
+	acid.$O\
+	bits.$O\
+	com.$O\
+	com64.$O\
+	$TARGMODEL.$O\
+	dcl.$O\
+	dpchk.$O\
+	funct.$O\
+	lex.$O\
+	mac.$O\
+	mpatof.$O\
+	pickle.$O\
+	scon.$O\
+	sub.$O\
+	y.tab.$O\
+	omachcap.$O\
+	alloc-posix.$O\
+
+HFILES=cc.h\
+	y.tab.h\
+
+YFILES=cc.y\
+
+<$ROOT/mkfiles/mksyslib-$SHELLTYPE
+
+
+mac.$O: macbody
+
+lex.$O:	lex.c
+	$CC $CFLAGS '-DCPP="/bin/cpp"' lex.c
+

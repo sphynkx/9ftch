@@ -6,7 +6,7 @@ Reworked only compiler, linker, assembler, archiver, necessary libs.
 
 Install:
 ```bash
-git clone ...
+git clone https://github.com/sphynkx/9ftch
 cd 9ftch
 ./configure
 mk install
